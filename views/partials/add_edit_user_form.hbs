@@ -1,0 +1,26 @@
+<div class="row">
+    <form class="row" action="/{{action}}/{{userID}}" method="POST" novalidate>
+        <div class="col-6">
+            <input type="text" name="first_name" placeholder="First Name" value="{{first_name}}">
+        </div>
+        <div class="col-6">
+            <input type="text" name="last_name" placeholder="Last Name" value="{{last_name}}">
+        </div>
+        <div class="my-2"></div>
+        <div class="col-6">
+            <input type="email" name="email" placeholder="E-mail" value="{{email}}">
+        </div>
+        <div class="col-6">
+            <input type="tel" name="phone" placeholder="Phone Number" value="{{phone}}">
+        </div>
+        <div class="my-2"></div>
+        <div class="col-12">
+            <textarea name="comments">{{comments}}</textarea>
+        </div>
+        <div class="my-2"></div>
+        <div class="col-12">
+        <input type="submit" value="{{title}}" class="btn btn-primary"></div>
+    </form>
+</div>
+
+

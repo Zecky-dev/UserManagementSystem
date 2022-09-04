@@ -1,0 +1,28 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Users</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{title}}</li>
+    </ol>
+</nav>
+<div class="user-box text-center">
+    <h2>{{first_name}} {{last_name}}</h2>
+    <div class="row">
+        <div class="col-6">
+            <i class="bi bi-envelope"></i> {{email}}
+        </div>
+        <div class="col-6">
+            <i class="bi bi-telephone"></i> {{phone}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Comments</h3>
+            {{#if comments}}
+            <p><i class="bi bi-card-text"></i> {{comments}}</p>
+            {{else}}
+            <p>Comment not found</p>
+            {{/if}}
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+    {{#if removedUser}}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>User removed successfully!</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {{/if}}
+<div class="row">
+    <div class="col-6">
+        <h1>Users</h1>
+    </div>
+    <div class="col-6 d-flex justify-content-end align-items-center">
+        <a href="/addUser" type="button" class="btn btn-primary">Add User</a>
+    </div>
+</div>
+<table class="table table-bordered mt-3">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each results}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{first_name}}</td>
+                <td>{{last_name}}</td>
+                <td>{{email}}</td>
+                <td>{{phone}}</td>
+                <td>{{status}}</td>
+                <td class="d-flex justify-content-around">
+                    <a href="/viewUser/{{id}}" class="btn btn-small"><i class="bi bi-eye"></i> View</a>
+                    <a href="/editUser/{{id}}" class="btn btn-small"><i class="bi bi-pencil"></i> Edit</a>
+                    <a href="/{{id}}" class="btn btn-small"><i class="bi bi-trash"></i> Remove</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
